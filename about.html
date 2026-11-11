@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | EverRoof</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #142700;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR */
+
+        .site-header {
+            width: 100%;
+            padding: 20px 6%;
+            background: #0B1F00;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .logo {
+            color: #50C600;
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #50C600;
+        }
+
+        .nav-button {
+            background: #50C600;
+            color: #142700;
+            padding: 13px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* PAGE HERO */
+
+        .about-hero {
+            min-height: 430px;
+            padding: 100px 8%;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(10, 25, 0, 0.75),
+                rgba(10, 25, 0, 0.75)),
+                url("images/img4.jpeg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero-content span {
+            color: #50C600;
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .hero-content h1 {
+            font-size: 55px;
+            margin: 20px 0;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #dddddd;
+        }
+
+        /* ABOUT INTRO */
+
+        .about-intro {
+            padding: 100px 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        .about-text span {
+            color: #50C600;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .about-text h2 {
+            font-size: 38px;
+            margin: 20px 0;
+        }
+
+        .about-text p {
+            color: #cccccc;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        /* OUR VALUES */
+
+        .values {
+            padding: 90px 8%;
+            background: #0B1F00;
+            text-align: center;
+        }
+
+        .section-heading span {
+            color: #50C600;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .section-heading h2 {
+            font-size: 38px;
+            margin: 15px 0;
+        }
+
+        .section-heading p {
+            color: #cccccc;
+            line-height: 1.7;
+            max-width: 650px;
+            margin: auto;
+        }
+
+        .value-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 55px;
+        }
+
+        .value-card {
+            padding: 35px 25px;
+            background: #142700;
+            border: 1px solid #315000;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            border-color: #50C600;
+        }
+
+        .value-card h3 {
+            color: #50C600;
+            font-size: 22px;
+            margin-bottom: 18px;
+        }
+
+        .value-card p {
+            color: #cccccc;
+            line-height: 1.8;
+        }
+
+        /* WHY CHOOSE US */
+
+        .why-us {
+            padding: 100px 8%;
+            text-align: center;
+        }
+
+        .why-us h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .why-us p {
+            max-width: 700px;
+            margin: auto;
+            color: #cccccc;
+            line-height: 1.9;
+        }
+
+        .why-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 28px;
+            background: #50C600;
+            color: #142700;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .why-button:hover {
+            background: white;
+        }
+
+        /* FOOTER */
+
+        .site-footer {
+            padding: 30px 6%;
+            background: #0B1F00;
+            text-align: center;
+            color: #aaaaaa;
+        }
+
+        .site-footer span {
+            color: #50C600;
+        }
+
+        /* MOBILE RESPONSIVENESS */
+
+        @media screen and (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 22px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 18px;
+            }
+
+            .about-hero {
+                min-height: 350px;
+                padding: 70px 6%;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .about-intro {
+                grid-template-columns: 1fr;
+                padding: 70px 6%;
+                gap: 35px;
+            }
+
+            .about-image img {
+                height: 300px;
+            }
+
+            .about-text h2,
+            .section-heading h2,
+            .why-us h2 {
+                font-size: 30px;
+            }
+
+            .value-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .values,
+            .why-us {
+                padding: 70px 6%;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">
+                EverRoof
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="index.html#service" class="nav-link">Services</a></li>
+                <li><a href="index.html#portfolio" class="nav-link">Our Work</a></li>
+                <li><a href="index.html#contactSection" class="nav-link">Contact</a></li>
+            </ul>
+
+            <a href="index.html#contactSection" class="nav-button">
+                Get Free Quote
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ABOUT HERO -->
+
+    <main>
+
+        <section class="about-hero">
+
+            <div class="hero-content">
+
+                <span>ABOUT EVERROOF</span>
+
+                <h1>
+                    Protecting Homes.<br>
+                    Building Trust.
+                </h1>
+
+                <p>
+                    We believe every home deserves a strong,
+                    reliable roof. Our commitment is to deliver
+                    quality roofing solutions that protect what
+                    matters most.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT INTRO -->
+
+        <section class="about-intro">
+
+            <div class="about-image">
+
+                <img src="images/img1.jpeg" alt="EverRoof roofing project">
+
+            </div>
+
+            <div class="about-text">
+
+                <span>WHO WE ARE</span>
+
+                <h2>
+                    Your Trusted Roofing Partner
+                </h2>
+
+                <p>
+                    At EverRoof, we are passionate about providing
+                    dependable roofing solutions that combine
+                    quality, durability and professional service.
+                </p>
+
+                <p>
+                    We understand that your roof is more than just
+                    a structure. It protects your family, your
+                    property and everything you have worked hard
+                    to build.
+                </p>
+
+                <p>
+                    That is why we focus on delivering roofing
+                    solutions designed to stand the test of time.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- OUR VALUES -->
+
+        <section class="values">
+
+            <div class="section-heading">
+
+                <span>WHAT DRIVES US</span>
+
+                <h2>Our Core Values</h2>
+
+                <p>
+                    Everything we do is guided by our commitment
+                    to quality work and customer satisfaction.
+                </p>
+
+            </div>
+
+            <div class="value-cards">
+
+                <div class="value-card">
+
+                    <h3>Quality</h3>
+
+                    <p>
+                        We believe in delivering roofing solutions
+                        built with care, attention and high standards.
+                    </p>
+
+                </div>
+
+                <div class="value-card">
+
+                    <h3>Reliability</h3>
+
+                    <p>
+                        We value trust and work hard to provide
+                        dependable service from start to finish.
+                    </p>
+
+                </div>
+
+                <div class="value-card">
+
+                    <h3>Customer Focus</h3>
+
+                    <p>
+                        Your satisfaction matters. We listen,
+                        understand your needs and focus on the
+                        right solution for your property.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- WHY CHOOSE US -->
+
+        <section class="why-us">
+
+            <h2>
+                Why Choose EverRoof?
+            </h2>
+
+            <p>
+                Choosing the right roofing partner makes all
+                the difference. We are committed to quality,
+                professional service and lasting protection
+                for your property.
+            </p>
+
+            <a href="index.html#contactSection" class="why-button">
+                Contact Us Today
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <p>
+            © 2026 <span>EverRoof</span>.
+            Quality Roofing. Lasting Protection.
+        </p>
+
+    </footer>
+
+</body>
+</html>

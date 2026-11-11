@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Work | EverRoof</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #142700;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        /* NAVBAR */
+
+        .site-header {
+            background: #0B1F00;
+            padding: 20px 6%;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .logo {
+            color: #50C600;
+            font-size: 28px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: .3s;
+        }
+
+        .nav-link:hover {
+            color: #50C600;
+        }
+
+        .nav-button {
+            background: #50C600;
+            color: #142700;
+            padding: 13px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* HERO */
+
+        .work-hero {
+            min-height: 420px;
+            padding: 100px 8%;
+            display: flex;
+            align-items: center;
+
+            background:
+                linear-gradient(
+                    rgba(10, 25, 0, .75),
+                    rgba(10, 25, 0, .75)
+                ),
+                url("images/img4.jpeg");
+
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .hero-content span {
+            color: #50C600;
+            font-weight: bold;
+            letter-spacing: 3px;
+        }
+
+        .hero-content h1 {
+            font-size: 55px;
+            line-height: 1.2;
+            margin: 20px 0;
+        }
+
+        .hero-content p {
+            color: #ddd;
+            line-height: 1.8;
+            font-size: 17px;
+        }
+
+        /* INTRO */
+
+        .work-intro {
+            padding: 85px 8%;
+            text-align: center;
+        }
+
+        .work-intro span {
+            color: #50C600;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .work-intro h2 {
+            font-size: 38px;
+            margin: 18px 0;
+        }
+
+        .work-intro p {
+            max-width: 700px;
+            margin: auto;
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        /* PROJECT GALLERY */
+
+        .project-gallery {
+            padding: 20px 8% 100px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .project-card {
+            background: #0B1F00;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #315000;
+            transition: .3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            border-color: #50C600;
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content span {
+            color: #50C600;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .project-content h3 {
+            font-size: 24px;
+            margin: 13px 0;
+        }
+
+        .project-content p {
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        /* PROJECT MESSAGE */
+
+        .work-message {
+            background: #0B1F00;
+            padding: 85px 8%;
+            text-align: center;
+        }
+
+        .work-message h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .work-message p {
+            color: #ccc;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        /* CTA */
+
+        .work-cta {
+            padding: 90px 8%;
+            text-align: center;
+        }
+
+        .work-cta h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+        .work-cta p {
+            color: #ccc;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 28px;
+            background: #50C600;
+            color: #142700;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: .3s;
+        }
+
+        .cta-button:hover {
+            background: white;
+        }
+
+        /* FOOTER */
+
+        .site-footer {
+            padding: 30px 6%;
+            background: #0B1F00;
+            text-align: center;
+            color: #aaa;
+        }
+
+        .site-footer span {
+            color: #50C600;
+        }
+
+        /* MOBILE */
+
+        @media screen and (max-width: 768px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 22px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 18px;
+            }
+
+            .work-hero {
+                padding: 70px 6%;
+                min-height: 350px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .work-intro h2,
+            .work-message h2,
+            .work-cta h2 {
+                font-size: 30px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card img {
+                height: 250px;
+            }
+
+            .work-intro,
+            .work-message,
+            .work-cta {
+                padding: 70px 6%;
+            }
+
+            .project-gallery {
+                padding: 10px 6% 70px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="site-header">
+
+        <nav class="navbar">
+
+            <a href="index.html" class="logo">EverRoof</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="work.html" class="nav-link">Our Work</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <a href="contact.html" class="nav-button">
+                Get Free Quote
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- HERO -->
+
+        <section class="work-hero">
+
+            <div class="hero-content">
+
+                <span>OUR PORTFOLIO</span>
+
+                <h1>
+                    Quality Work.<br>
+                    Lasting Protection.
+                </h1>
+
+                <p>
+                    Take a look at our roofing projects and
+                    discover the quality, care and attention
+                    we bring to every job.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTRO -->
+
+        <section class="work-intro">
+
+            <span>OUR RECENT PROJECTS</span>
+
+            <h2>Work That Speaks for Itself</h2>
+
+            <p>
+                Every roofing project is an opportunity to
+                deliver quality and build trust. Explore some
+                examples of the roofing work we showcase.
+            </p>
+
+        </section>
+
+
+        <!-- PROJECT GALLERY -->
+
+        <section class="project-gallery">
+
+            <div class="project-grid">
+
+                <div class="project-card">
+
+                    <img src="images/img1.jpeg"
+                         alt="Residential roofing project">
+
+                    <div class="project-content">
+
+                        <span>RESIDENTIAL ROOFING</span>
+
+                        <h3>Residential Roof Project</h3>
+
+                        <p>
+                            A roofing project focused on
+                            durability, protection and a
+                            clean professional finish.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <img src="images/img2.jpeg"
+                         alt="Roof installation project">
+
+                    <div class="project-content">
+
+                        <span>ROOF INSTALLATION</span>
+
+                        <h3>Modern Roof Installation</h3>
+
+                        <p>
+                            A roofing installation designed
+                            to combine reliable protection
+                            with an attractive appearance.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <img src="images/img4.jpeg"
+                         alt="Roof improvement project">
+
+                    <div class="project-content">
+
+                        <span>ROOF IMPROVEMENT</span>
+
+                        <h3>Roof Improvement Project</h3>
+
+                        <p>
+                            Improving roofing quality and
+                            helping properties maintain
+                            dependable protection.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="project-card">
+
+                    <img src="images/img1.jpeg"
+                         alt="Roof maintenance project">
+
+                    <div class="project-content">
+
+                        <span>ROOF MAINTENANCE</span>
+
+                        <h3>Roof Care Project</h3>
+
+                        <p>
+                            Roofing care focused on
+                            maintaining the condition
+                            and performance of a roof.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MESSAGE -->
+
+        <section class="work-message">
+
+            <h2>Every Roof Has a Story</h2>
+
+            <p>
+                We believe great roofing work is about more
+                than appearance. It is about delivering
+                protection, reliability and confidence
+                for every property.
+            </p>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section class="work-cta">
+
+            <h2>Have a Roofing Project in Mind?</h2>
+
+            <p>
+                Let's talk about your project and how
+                EverRoof can help.
+            </p>
+
+            <a href="contact.html" class="cta-button">
+                Start Your Project
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+
+        <p>
+            © 2026 <span>EverRoof</span>.
+            Quality Roofing. Lasting Protection.
+        </p>
+
+    </footer>
+
+</body>
+</html>
